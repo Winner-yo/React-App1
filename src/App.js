@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { User } from './users';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const Planets = [
+    {name:"Mars", isGasPlante:true},
+    {name:"Earth", isGasPlante:false},
+    {name:"Jupiter", isGasPlante:true},
+    {name:"Venus", isGasPlante:false},
+    {name:"Neptun", isGasPlante:true},
+    { name: "Uranus", isGasPlante: true }
+  ]
+  return <div className="App">{Planets.map((Planet, key) => {
+    return <User name={Planet.isGasPlante && Planet.name} />;
+  })}</div>;
 }
 
 export default App;
