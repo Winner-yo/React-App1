@@ -1,44 +1,13 @@
 import './App.css';
+import { Task } from './Task';
 import { useState } from 'react';
 function App() {
-  const [toDoList, setToDoList] = useState([]);
-  const [newTask, setNewTask] = useState('');
-
-  const changeHandler = (event) => {
-    setNewTask(event.target.value)
-  }
-
-  const addTask = ()=> {
-    setToDoList([...toDoList, newTask])
-  } 
-
-  const deleteTask = (taskName) => {
-    setToDoList(toDoList.filter((task) => task !== taskName));
-  };
-
   return (
-    <div className="App">
-      <div>
-        <input className="addTask" onChange={changeHandler} />
-        <button onClick={addTask}> Add Task</button>
-      </div>
+    <div className='.App'>
 
-      <div className="list">
-        {toDoList.map(
-          (task) => {
-            return (
-              <h3>
-                {task} {<button onClick={()=>deleteTask(task)}>X</button>}
-              </h3>
-            );
-          }
-        )}
-        
-      </div>
     </div>
-  );
+          );
 }
-
 export default App;
 
 
@@ -147,3 +116,66 @@ export default App; */
 //     </div>
 //   );
 // }
+
+/*
+import './App.css';
+import { Task } from './Task';
+import { useState } from 'react';
+function App() {
+  const [toDoList, setToDoList] = useState([]);
+  const [newTask, setNewTask] = useState('');
+  const changeHandler = (event) => {
+    setNewTask(event.target.value)
+  }
+  const addTask = () => {
+    const task = {
+      id: toDoList.length === 0 ? 1 : toDoList[toDoList.length - 1].id + 1,
+      taskName: newTask,
+      completed: false
+    };
+    setToDoList([...toDoList, task])
+  };
+  const deleteTask = (id) => {
+    setToDoList(toDoList.filter((task) => task.id !== id));
+  };
+
+  const completedTask = (id) => {
+    setToDoList(
+      //toDoList.map((task) => {
+        if (task.id === id)
+          return { ...task, completed: true }
+        else {
+          return task
+        }
+}));
+  }
+  return (
+    <div className="App">
+      <div className="input_add">
+        <input className="addTask" onChange={changeHandler} />
+        <button className="firstbutton" onClick={addTask}>
+          Add Task
+        </button>
+      </div>
+
+      <div
+        className="list"
+      >
+        {toDoList.map((task) => {
+          return (
+            <Task
+              taskName={task.taskName}
+              id={task.id}
+              completed={task.completed}
+              deleteTask={deleteTask}
+              completedTask={completedTask}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+export default App;
+*/
