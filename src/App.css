@@ -1,5 +1,42 @@
 .App {
   text-align: center;
+  padding: 1rem;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
+  text-align: center;
 }
 
 .App-header {
@@ -45,4 +82,4 @@ body{
 .secondbutton ,.one{
   padding: 20px;
   margin: 10px;
-}
+} */

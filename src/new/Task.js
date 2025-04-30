@@ -52,5 +52,5 @@ export const Task = (props) => {
       </div>
     );
 }
-*/
-//const uc = <Task task_Name=taskName, id_=id/>
+
+{/* const uc = <Task task_Name=taskName, id_=id/> */}

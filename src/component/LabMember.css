@@ -1,0 +1,32 @@
+.lab-member-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lab-member-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.lab-member-details {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.lab-member-details li {
+  margin: 0.25rem 0;
+}
+
+.lab-member-quote {
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: #555;
+}
